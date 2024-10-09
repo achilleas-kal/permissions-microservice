@@ -1,0 +1,17 @@
+version: '3'
+services:
+  server1:
+    build: ./EthNamespaceBuilder
+    ports:
+      - "8000:8000"
+    environment:
+      - RABBITMQ_URL=${RABBITMQ_URL}
+      - INFURA_PROJECT_ID=${INFURA_PROJECT_ID}
+
+  server2:
+    build: ./PermissionsSyncer
+    ports:
+      - "8001:8001"
+    environment:
+      - RABBITMQ_URL=${RABBITMQ_URL}
+

@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "lib": ["es2020", "dom"],
+    "target": "es2020",                  // Target a more modern version of JavaScript
+    "module": "commonjs",                // CommonJS is correct for Node.js
+    "moduleResolution": "node",          // Node.js module resolution
+    "esModuleInterop": true,             // Ensures compatibility with CommonJS and ES modules
+    "strict": true,                      // Enable strict type-checking options
+    "skipLibCheck": true,                // Skip type checking of declaration files for faster builds
+    "forceConsistentCasingInFileNames": true, // Ensure file imports are case-sensitive
+    "outDir": "./dist",                  // Output compiled files to a `dist` directory
+    "rootDir": "./src",                  // Specify the root directory of your source code
+    "resolveJsonModule": true,           // Allow importing of JSON modules
+    "noImplicitAny": false               // Disable `noImplicitAny` to avoid excessive type errors for now
+  },
+  "include": ["src/**/*.ts"],             // Include all TypeScript files in `src/`
+  "exclude": ["node_modules"]             // Exclude `node_modules` from compilation
+}
+
